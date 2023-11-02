@@ -21,4 +21,4 @@ print(length_)
 print(length_set_)
 print(list_set_)
 
-print(str_.count(' '))  # Подсчет количества символов
+print(str_.count(' '))  # Подсчет количества пробелов
