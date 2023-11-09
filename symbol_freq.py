@@ -1,5 +1,8 @@
-str_ = input()
+#str_ = input()
 
+f = open('old_man.txt','r')
+for line in f:
+    str_ = line.strip().join()
 str_ = str(str_)
 print(len(str_))
 
@@ -28,6 +31,7 @@ for i in range(len(list_set_)):
 
 print(dict_)
 
+f.close()
 #the_dict = {x:x*x for x in range(1,21)}
 #dict.append(f'{a}:{a**2}')
 
