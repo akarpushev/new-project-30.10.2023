@@ -16,4 +16,3 @@ for elem in data:
     f.write(user+'\n')
 
 f.close()
-
