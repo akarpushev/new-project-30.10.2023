@@ -1,0 +1,5 @@
+89110271345;m;morozov;kirill
+89998887723;m;ivanov;ivan
+89623452288;m;petrov;peter
+89776542345;m;stepanov;igor
+89776549900;m;ivanov;peter
