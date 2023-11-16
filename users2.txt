@@ -1,5 +1,6 @@
-89110271345;m;morozov;kirill
-89998887723;m;ivanov;ivan
-89623452288;m;petrov;peter
-89776542345;m;stepanov;igor
-89776549900;m;ivanov;peter
+89110271345; m; Morozov; Kirill
+89967780526; m; Berezkin; Lesha
+899977754028; f; Sutulova; Anna
+8966545244; f; Petrovna; Anastasia
+89948750635; m; Plankin; Oleg
+89119271345; m; morozov; kirill

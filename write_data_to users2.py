@@ -6,7 +6,7 @@ data = cursor.fetchall()
 
 f = open('users2.txt', 'w')
 for elem in data:
-    elem = elem.strip().split(':')
+
     name = elem[0]
     surname = elem[1]
     sex = elem[2]
