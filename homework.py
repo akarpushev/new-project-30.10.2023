@@ -4,19 +4,20 @@ cursor = connection.cursor()
 cursor.execute('select * from telsprav')
 data = cursor.fetchall()
 
+users = []
 for elem in data:
     name = elem[0]
     surname = elem[1]
     sex = elem[2]
     phone = elem[3]
-    users = (f'{name}, {surname}, {sex}, {phone}').split()
+    users += [(f'{name} {surname} {sex} {phone}').split()]
+#print(users)
 
 while True:
     username = input("Введите имя: ")
-    #for name in users[0]:
-    if username in users[0]:
-        #if username == users[0]:
-        print('Телефон абонента', username, users[3])
-        break
+    for name in users:
+        if name != username:
+            print('Телефон абонента', username, users[3])
+
     print('Абонент', username, 'отсутствует')
-    continue
+
