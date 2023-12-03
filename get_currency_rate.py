@@ -24,10 +24,10 @@ def get_data_from_cb(site):
 def put_data_to_db(connection, cursor, data):
     today = datetime.datetime.today().strftime("%Y%m%d")
     #data
-    #{"USD":"92",
+    #{"USD":"92","EUR":"101"}
     for valute in data:
         rate = data[valute]
-        insert_string = f'INSERT into currency_exchange_rate values("{valute}","{rate}","{today}"'
+        insert_string = f'INSERT into currency_exchange_rate values("{valute}","{rate}","{today}")'
         #print(insert_string)
         cursor.execute(insert_string)
     connection.commit()
