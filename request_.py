@@ -1,8 +1,7 @@
 import requests
-
 import re
 
-result = requests.result('https://ipap.ru')
+result = requests.get('https://ipap.ru')
 text = result.text
 print(text)
 
