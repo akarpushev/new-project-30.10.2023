@@ -3,10 +3,9 @@ import pymysql
 import datetime
 import configparser
 import logging
-logging.basicConfig(filename = 'get_currency_rate.log', level = logging.INFO)
+logging.basicConfig(filename = 'get_currency_rate.log', level = logging.DEBUG) #DEBUG или INFO или CRITICAL
 
 def get_data_from_config():
-
     config = configparser.ConfigParser()
     config.read('get_currency_rate.conf')
     db_host = config['database']['db_host']
@@ -25,9 +24,12 @@ def get_data_from_config():
 
 def get_data_from_cb(site):
     result = requests.get(site)
+    logging.debug(f'{datetime.datetime.now()} - Получили ответ из ЦБ сайта {cb_site}')
     valites = result.json()
+    logging.debug(f'{datetime.datetime.now()} - Получили информацию о валютах - {valites}')
     valutes_raw_dict = valites['Valute']
     clean_valute_dict = {}
+    logging.debug(f'{datetime.datetime.now()} - Удаление старых данных из библиотеки')
     for val in valutes_raw_dict:
         real_rate = valutes_raw_dict[val]['Value'] / valutes_raw_dict[val]['Nominal']
         clean_valute_dict[val] = round(real_rate, 3)
